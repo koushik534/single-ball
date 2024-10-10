@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+ <div style="border: 1px solid black;
+    height: 600px;
+    width: 600px;
+    background-color: skyblue;
+    ">
+
+    </div>
+
+    <script>
+        function hello() {
+            var hi = document.createElement('div');
+            hi.style.top = '50px';
+            hi.style.left = '50px';
+            hi.style.width = '50px';
+            hi.style.height = '50px';
+            hi.style.background = "linear-gradient(black,blue)";
+            hi.style.borderRadius = '50%';
+            hi.style.position = 'absolute';
+            document.body.appendChild(hi);
+            return hi;
+        }
+        let time=150;
+        let pos=0;
+        let vel=100;
+        let ball=hello()
+
+        function move(){
+            pos=pos+vel
+        if(pos > 500 -50 || pos < 50){
+            vel=-vel;
+        }
+         ball.style.top=pos+'px'
+         ball.style.left=pos+'px'
+
+    }
+      setInterval(move,time)
+    </script>
+</body>
+</html>
